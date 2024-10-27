@@ -30,6 +30,8 @@ services:
       - "traefik.http.services.dmc-jellyfin.loadbalancer.server.port=8096"
       - "traefik.http.routers.dmc-jellyfin.tls.certresolver=letsencrypt"
       - "traefik.docker.network=global"
+    ports:
+      - "8096:8096"
 
   transmission:
     image: lscr.io/linuxserver/transmission:latest
